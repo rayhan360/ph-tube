@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="max-w-screen-xl mx-auto">
+<body class="max-w-[1400px] mx-auto">
     <!-- header section -->
     <header>
         <!-- navigation bar -->
@@ -48,12 +48,20 @@
 
     <!-- main section -->
     <main>
-        <div class="tabs tabs p-5 m-auto text-center flex gap-5 justify-center" id="tab-container">
-            <!-- <a class="tab bg-[#FF1F3D]  text-white rounded-lg">Tab 1</a>
-            <a class="tab bg-gray-300 text-gray-600 rounded-lg">Tab 1</a>
-            <a class="tab bg-gray-300 text-gray-600 rounded-lg">Tab 1</a>
-            <a class="tab bg-gray-300 text-gray-600 rounded-lg">Tab 1</a> -->
+        <div class="tabs tabs p-5 m-auto mt-5 text-center flex gap-5 justify-center" id="tab-container">
         </div>
+
+        <section id="no-found-data" class="hidden">
+            <div class="flex flex-col items-center mt-28">
+                <img class="w-52" src="image/Icon.png" alt="">
+                <h1 class="text-[#171717] text-xl md:text-4xl font-bold text-center mt-5">Oops!! Sorry, There is no <br> content here</h1>
+            </div>
+        </section>
+
+        <!-- cards -->
+        <section id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+        </section>
     </main>
 
 
