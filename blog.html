@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-lg md:text-3xl text-black font-medium flex justify-center shadow-lg h-20 items-center">Discuss a
+            javascript hot topic ES6</h1>
+    </header>
+    <main class="mt-10 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1400px] mx-auto">
+        <!-- first blog -->
+        <div class="card  bg-base-100 shadow-xl">
+            <figure><img src="image/var1.webp" alt="image loaded" /></figure>
+            <div class="card-body">
+                <p>Data: 21/08/2023</p>
+                <h2 class="card-title">Discuss the scope of var, let, and const</h2>
+                <div class="flex gap-5 mt-3">
+                    <img class="w-14 h-14 rounded-full" src="image/blog.jpg" alt="">
+                    <div>
+                        <p class="text-black">Richard Johnson</p>
+                        <p class="text-sm">Web Developer</p>
+                    </div>
+                </div>
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="px-5 py-2 mt-3 rounded-lg bg-[#FF1F3D] text-white" onclick="my_modal_5.showModal()">show
+                    details</button>
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-top">
+                    <form method="dialog" class="modal-box bg-gray-200">
+                        <div>
+                            <h1 class="text-xl text-black font-medium">variables</h1>
+                            <ol class="ml-3">
+                                <li>1. variable ঘোষণার জন্য var keyword default ভাবে use করা হয়। var keyword মাধ্যমে একই
+                                    নামে একাধিক variable ঘোষণা করা যায়।
+                                </li>
+                                <li>2. variable ঘোষণার জন্য যদি let keyword ব্যবহার করা হয় তবে variable টি পরবর্তীতে
+                                    পরিবর্তন করা সম্ভব। তবে একই নামে একাধিক variabel ঘোষণা করা যাবেনা।</li>
+                                <li>3. variable ঘোষণার জন্য যদি const keyword ব্যবহার করা হয় তবে variable টি পরিবর্তন
+                                    করা আর সম্ভব না।</li>
+                            </ol>
+                        </div>
+                        <div class="mt-3">
+                            <h1 class="text-xl text-black font-medium">Certainly! Let's dive into the differences
+                                between var, let, and const in JavaScript.</h1>
+                            <p>1. var: Use var when you need function-scoped variables or want to leverage hoisting
+                                (though it's generally better to avoid var nowadays).
+                                <br>
+                                2. let: Use let when you need block-scoped variables that can be reassigned.
+                                <br>
+                                3. const: Use const when you want to define a constant value or a block-scoped variable
+                                that shouldn't be reassigned.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-lg text-black font-medium">Should I use var or let or const in JavaScript?
+                            </p>
+                            <p>ans: As a general rule, you should always declare variables with const, if you realize
+                                that
+                                the value of the variable needs to change, go back and change it to let. Use let when
+                                you
+                                know that the value of a variable will change. Use const for every other variable.</p>
+                            <p class="text-lg text-black font-medium">Why is let better than VAR?</p>
+                            <p>ans: The difference between let and var is in the scope of the variables they create:
+                                Variables declared by let are only available inside the block where they're defined.
+                                Variables declared by var are available throughout the function in which they're
+                                declared</p>
+                            <p class="text-lg text-black font-medium">Why not use var in JavaScript?</p>
+                            <p>ans: Scoping — the main reason to avoid var
+                                Is Var in JavaScript bad practice?
+                                ans: No! Unless there's really, really, reeaaally a specific reason for you to use var ,
+                                use
+                                let or const . Even if you find a reason to absolutely use var , perhaps blame your
+                                coding
+                                style and change. const and let is better in the majority of cases, but there are still
+                                a
+                                few cases where var is more correct</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-20 md:ml-28 lg:ml-36 mt-20">
+                            <img class="w-[500px] md:h-[400px]" src="image/var.avif" alt="">
+                            <img class="w-[500px] md:h-[400px]" src="image/var-3.jpg" alt="">
+                        </div>
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn bg-[#FF1F3D] text-white">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+
+        <!-- second blog -->
+        <div class="card  bg-base-100 shadow-xl">
+            <figure><img src="image/null.jpg" alt="image loaded" /></figure>
+            <div class="card-body">
+                <p>Data: 21/08/2023</p>
+                <h2 class="card-title">Tell us the use cases of null and undefined</h2>
+                <div class="flex gap-5 mt-3">
+                    <img class="w-14 h-14 rounded-full" src="image/blog.jpg" alt="">
+                    <div>
+                        <p class="text-black">Richard Johnson</p>
+                        <p class="text-sm">Web Developer</p>
+                    </div>
+                </div>
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="px-5 py-2 mt-3 rounded-lg bg-[#FF1F3D] text-white" onclick="my_modal_6.showModal()">show
+                    details</button>
+                <dialog id="my_modal_6" class="modal modal-bottom sm:modal-top">
+                    <form method="dialog" class="modal-box bg-gray-200">
+                        <div>
+                            <h1 class="text-black font-medium text-2xl">Undefined vs Null</h1>
+                            <li class="text-sm ml-3">Undefined means the variable has been declared, but its value has
+                                not been assigned. Null means an empty value or a blank value.</li>
+
+                            <div class="mt-3">
+                                <h1 class="text-black font-medium text-2xl">What is the use case of null in JavaScript?
+                                </h1>
+                                <p class="text-sm ml-3">ans: Null is an object in JavaScript and represents primitive
+                                    data types. A null
+                                    value in JavaScript is used for referring absence of any object value and if any
+                                    function or variable returns null, then we can infer that the object could not be
+                                    created.</p>
+                            </div>
+                            <div class="mt-3">
+                                <h1 class="text-black font-medium text-2xl">What is the use of undefined in JavaScript?
+                                </h1>
+                                <p class="text-sm ml-3">ans: The undefined property indicates that a variable has not
+                                    been assigned a value, or not declared at all.</p>
+                            </div>
+                            <div class="flex flex-col lg:flex-row gap-20 md:ml-28 lg:ml-36 mt-20">
+                                <img class="w-[500px] md:h-[300px]" src="image/null2.jpg" alt="">
+                                <img class="w-[500px] md:h-[300px]" src="image/null3.png" alt="">
+                            </div>
+
+                        </div>
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn bg-[#FF1F3D] text-white">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+
+        <!-- third blog -->
+        <div class="card  bg-base-100 shadow-xl">
+            <figure><img src="image/rest.jpg" alt="image loaded" /></figure>
+            <div class="card-body">
+                <p>Data: 21/08/2023</p>
+                <h2 class="card-title">What do you mean by REST API?</h2>
+                <div class="flex gap-5 mt-3">
+                    <img class="w-14 h-14 rounded-full" src="image/blog.jpg" alt="">
+                    <div>
+                        <p class="text-black">Richard Johnson</p>
+                        <p class="text-sm">Web Developer</p>
+                    </div>
+                </div>
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="px-5 py-2 mt-3 rounded-lg bg-[#FF1F3D] text-white" onclick="my_modal_7.showModal()">show
+                    details</button>
+                <dialog id="my_modal_7" class="modal modal-bottom sm:modal-top">
+                    <form method="dialog" class="modal-box bg-gray-200">
+                        <div>
+                            <h1 class="text-black font-medium text-xl">What do you mean by REST API?</h1>
+                            <p class="text-sm ml-3 mt-2">ans: REST API stands for Representational State Transfer
+                                Application Programming
+                                Interface. It is an architectural style for building web services that uses HTTP
+                                protocols to retrieve and send data. RESTful APIs are designed to be simple,
+                                lightweight, and scalable, making them easy to use and widely adopted.</p>
+                        </div>
+                        <div>
+                            <h1 class="text-black font-medium text-xl mt-3">REST APIs are designed around a few key
+                                principles:</h1>
+                            <li>Resources: In REST, everything is treated as a resource, which can be a piece of data or
+                                an object. Each resource is identified by a unique URL (Uniform Resource Locator).</li>
+                            <li>HTTP Methods: REST APIs use standard HTTP methods to perform actions on resources. The
+                                most common HTTP methods used in REST are GET (retrieve data), POST (create new data),
+                                PUT (update data), and DELETE (remove data).</li>
+                            <li>Stateless: The communication between a client (requesting system) and a server
+                                (providing system) is stateless, meaning each request from the client must contain all
+                                the information needed to understand and process the request.</li>
+                            <li>Representations: Data is transferred in various formats, such as JSON (JavaScript Object
+                                Notation) or XML (eXtensible Markup Language), depending on the content type specified
+                                in the request.</li>
+                            <li>Uniform Interface: REST APIs have a uniform interface that simplifies interactions
+                                between different clients and servers. This consistency makes it easier to develop and
+                                maintain applications.</li>
+                            <li>Client-Server Architecture: REST separates the client and server components, allowing
+                                them to evolve independently. The client is responsible for the user interface, while
+                                the server manages data and business logic.</li>
+                            <li>Caching: REST APIs often support caching mechanisms to improve performance and reduce
+                                the need for repetitive requests.</li>
+                        </div>
+                        <div class="flex flex-col lg:flex-row gap-20 md:ml-28 lg:ml-36 mt-20">
+                            <img class="w-[500px] md:h-[300px]" src="image/rest2.PNG" alt="">
+                            <img class="w-[500px] md:h-[300px]" src="image/rest3.png" alt="">
+                        </div>
+                        
+                        <div class="modal-action">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn bg-[#FF1F3D] text-white">Close</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
