@@ -7,9 +7,9 @@ const manageCategory = async () => {
     const categoryContainer = document.getElementById('tab-container');
 
     phTube.forEach((category) => {
-        const createDiv  = document.createElement('div');
+        const createDiv = document.createElement('div');
         createDiv.innerHTML = `
-        <a onclick="manageData('${category.category_id}')" class="tab bg-gray-300 text-gray-600 rounded-lg">${category.category}</a>
+        <a id="category-btn" onclick="manageData('${category.category_id}')" class="tab bg-gray-300 text-gray-600 rounded-lg">${category.category}</a>
         `;
         categoryContainer.appendChild(createDiv)
     });
@@ -22,7 +22,7 @@ const sortData = () => {
     const sortedCardData = cards.sort((card1, card2) => {
         const views1 = parseInt(card1.querySelector('#total-views').innerText.split("K", 1));
         const views2 = parseInt(card2.querySelector('#total-views').innerText.split("K", 1))
-        return views2 -views1
+        return views2 - views1
     });
 
     cardContainer.innerHTML = '';
@@ -45,25 +45,26 @@ const manageData = async (id) => {
 
     // no found
     const noData = document.getElementById('no-found-data');
-    if(videos.length === 0){
+    if (videos.length === 0) {
         noData.classList.remove('hidden')
-    }else{
+    } else {
         noData.classList.add('hidden')
     }
+
 
     videos.forEach((video) => {
         // console.log(video);
         const div = document.createElement('div');
-        
-        const convertSecondToHrsMin = (second) =>{
+
+        const convertSecondToHrsMin = (second) => {
             const hours = Math.floor(second / 3600);
             const remainSec = Math.floor(second % 3600);
             const min = Math.floor(remainSec / 60);
 
-            return {hours, min}
+            return { hours, min }
         }
         const totalSeconds = video.others.posted_date;
-        const {hours, min} =  convertSecondToHrsMin(totalSeconds);
+        const { hours, min } = convertSecondToHrsMin(totalSeconds);
 
         const check = true;
         const img = `<img src="image/svg.svg"/>`
@@ -71,8 +72,8 @@ const manageData = async (id) => {
         <div class="card bg-base-100 shadow-xl">
             <div class="relative">
                 <figure><img class="w-[300px] h-[200px]" src=${video?.thumbnail}, alt="thumbnail image" /></figure>
-                <div class="bg-black text-white text-sm rounded-md p-1 absolute right-16 md:absolute md:right-12 md:bottom-2 bottom-2 lg:absolute lg:right-6 lg:bottom-2">
-                    <p>${hours === 0 ? '' : hours} ${hours === 0 ? '': 'hrs'} ${min === 0 ? '' : min} ${min === 0 ? '' : 'min'} ${hours === 0 ? '' : 'ago'}</p>
+                <div class=" text-white text-sm rounded-md p-1 absolute right-16 md:absolute md:right-12 md:bottom-2 bottom-2 lg:absolute lg:right-6 lg:bottom-2 ${hours === 0 ? '' : 'bg-black'}">
+                    <p>${hours === 0 ? '' : hours} ${hours === 0 ? '' : 'hrs'} ${min === 0 ? '' : min} ${min === 0 ? '' : 'min'} ${hours === 0 ? '' : 'ago'}</p>
                 </div>
             </div>
             <div class="card-body">
@@ -90,14 +91,13 @@ const manageData = async (id) => {
                     </div>
                 </div>
             </div>
-            <p class="absolute top-52 left-72 md:absolute md:top-44 md:left-64 lg:absolute lg:top-40 lg:left-56 text-sm bg-[#171717] w-30 text-white rounded-md py-1 px-1 "></p>
         </div>
         `;
-    cardContainer.appendChild(div)
+        cardContainer.appendChild(div)
 
     })
 
-    
+
 }
 
 
